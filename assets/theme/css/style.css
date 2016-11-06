@@ -1152,6 +1152,14 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .mbr-gallery .modal.in .modal-dialog {
   margin: 0 auto; }
 
+
+@media (max-width: 767px){
+  .no-p-b-xs {
+    padding-bottom: 0px !important;
+  }
+
+}
+
 /* modal back color opacity */
 .modal-backdrop.in {
   opacity: 0.8;
