@@ -1,0 +1,19 @@
+This zip file contains optimized resources for http://msgque.com/. The optimized resources are listed below in the format of: 
+filename: url
+
+Note: We only include up to 10 MB of optimized contents. If the
+optimized contents of your page are larger than 10 MB, we list them in
+this file too, with 'NOT INCLUDED' to indicate those URLs require
+further optimization.
+
+css/style.css: http://msgque.com/assets/et-line-font-plugin/style.css
+css/material.css: http://msgque.com/assets/bootstrap-material-design-font/css/material.css
+css/style_2.css: http://msgque.com/assets/theme/css/style.css
+js/SmoothScroll.js: http://msgque.com/assets/smooth-scroll/SmoothScroll.js
+js/jquery.viewportchecker.js: http://msgque.com/assets/viewportChecker/jquery.viewportchecker.js
+js/jarallax.js: http://msgque.com/assets/jarallax/jarallax.js
+js/social-likes.js: http://msgque.com/assets/social-likes/social-likes.js
+js/script.js: http://msgque.com/assets/theme/js/script.js
+image/Msgque.png: http://msgque.com/assets/images/Msgque.png
+image/jumbotron.png: http://msgque.com/assets/images/jumbotron.png
+image/kannel.png: http://msgque.com/assets/theme/img/icons/kannel.png
