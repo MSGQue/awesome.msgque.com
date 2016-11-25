@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contributors - MSGQue</title>
+		<script src="//cdn.rawgit.com/anvaka/VivaGraphJS/master/dist/vivagraph.min.js"></script>
+		<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script>
+		  function onLoad() {
+		 
+			var graph = Viva.Graph.graph();
+
+			// Construct the graph
+			graph.addNode('manjeshpv', {url : 'https://avatars3.githubusercontent.com/u/1999957?v=3&s=40'});
+			graph.addNode('nakulchandra', {url : 'https://avatars0.githubusercontent.com/u/20018235?v=3&s=40'});
+			graph.addNode('raveesha', {url : 'https://avatars0.githubusercontent.com/u/8186103?v=3&s=64'});
+			graph.addNode('venugopalbg', {url : 'https://avatars3.githubusercontent.com/u/22786024?v=3&s=64'});
+			graph.addNode('nikkithought', {url : 'https://avatars2.githubusercontent.com/u/16484940?v=3&s=64'});
+
+
+
+			graph.addLink('manjeshpv', 'nakulchandra');
+			graph.addLink('manjeshpv', 'raveesha');
+			graph.addLink('manjeshpv', 'venugopalbg');
+			graph.addLink('manjeshpv', 'nikkithought');
+			graph.addLink('nakulchandra', 'venugopalbg');
+		
+
+			// Set custom nodes appearance
+			var graphics = Viva.Graph.View.svgGraphics();
+			graphics.node(function(node) {
+				   // The function is called every time renderer needs a ui to display node
+				    var ui = Viva.Graph.svg('image')
+						 .attr('width', 24)
+						 .attr('height', 24)
+						 .link(node.data.url); // node.data holds custom object passed to graph.addNode();
+						 
+					$(ui).hover(function() { // mouse over
+						$('#graphDiv').css('cursor', 'pointer');
+					}, function() { // mouse out
+						$('#graphDiv').css('cursor', 'initial');
+					});
+
+					$(ui).click(function() { // mouse click
+						console.log("click.", node.id);
+						window.location = 'https://github.com/'+node.id
+					});
+						
+					return ui;
+				})
+				.placeNode(function(nodeUI, pos){
+					// Shift image to let links go to the center:
+					nodeUI.attr('x', pos.x - 12).attr('y', pos.y - 12);
+				});
+
+			var renderer = Viva.Graph.View.renderer(graph, {
+				container: document.getElementById('graphDiv'),
+				graphics : graphics
+			});
+
+			renderer.run();
+		  }
+		</script>
+		
+		 <style type="text/css" media="screen">
+            body, html, svg { width: 100%; height: 100%; overflow: hidden; }
+        </style>
+	</head>
+	<body onload="onLoad()">
+		<h3></h3>
+		<div id='graphDiv' style='margin-top:50px; height:300px'></div>
+	</body>
+</html>
