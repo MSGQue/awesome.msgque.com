@@ -1,2 +1,1 @@
-# www
-htt[://www.msgque.com
+# http://www.msgque.com
